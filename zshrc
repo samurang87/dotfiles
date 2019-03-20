@@ -6,6 +6,8 @@ export ZSH=/home/cmezzavilla/.oh-my-zsh
 
 source $HOME/.aliases
 
+export KUBE_PS1_BINARY="zkubectl"
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -68,6 +70,7 @@ plugins=(
   python
   pip
   virtualenvwrapper
+  kube-ps1
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -105,3 +108,5 @@ source $ZSH/oh-my-zsh.sh
 #export VIRTUAL_ENV_DISABLE_PROMPT=
 
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+source <(zkubectl completion zsh)
