@@ -7,17 +7,7 @@ alias changeldap='rdesktop -kde -x0x80 -g1280x1020+0+0 -dCORP -u cmezzavilla z-w
 # launch jetbrains toolbox
 alias jet-brains="~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox -single-process"
 
-# docking station mode without laptop screen
-alias dockthestation="$SHELL ~/.screenlayout/dockingstation.sh"
-
-# use laptop screen only
-alias laptoponly="$SHELL ~/.screenlayout/laptoponly.sh"
-
-# use all the screens
-alias dockallthethings="$SHELL ~/.screenlayout/allmonitors.sh"
-
-# hipchat with workaround
-alias hipchat-start="QTWEBENGINE_DISABLE_SANDBOX=true /opt/HipChat4/bin/HipChat4"
-
 # ssh
 alias ssh-start="eval `keychain --eval --agents ssh id_rsa`"
+
+alias gdatb="git branch | grep -v "master" | xargs git branch -D"
