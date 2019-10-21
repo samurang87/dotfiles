@@ -1,9 +1,6 @@
 alias shrug="echo ¯\\\_\(ツ\)_/¯"
 alias tableflip="echo '(╯°□°)╯︵ ┻━┻'"
 
-# screen to change the ldap pwd
-alias changeldap='rdesktop -kde -x0x80 -g1280x1020+0+0 -dCORP -u cmezzavilla z-wnterminal01'
-
 # launch jetbrains toolbox
 alias jet-brains="~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox -single-process"
 
