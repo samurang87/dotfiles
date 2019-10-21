@@ -30,17 +30,18 @@ fi
 export GOROOT=
 export GOPATH=
 export PATH=$PATH:$HOME/bin:$GOROOT/bin
+export CGO_ENABLED=1  # Enable cgg to use sqlite3 in go
 
 # Python
 export WORKON_HOME=~/Envs
 export PROJECT_HOME=$HOME/Code
-
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export PYENV_ROOT=/Users/cmezzavilla/.pyenv
 
 # Jira
 export JIRAURL=
 export JIRACREDENTIALS=
 export JIRA_URL=
-
 
 # Java (ugh)
 export JAVA_HOME=/usr/lib/jvm/jdk-11.0.1/bin/java
