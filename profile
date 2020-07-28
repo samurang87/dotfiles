@@ -51,3 +51,5 @@ export PATH=$PATH:/usr/lib/jvm/jdk-11.0.1/bin
 export EDITOR=atom
 export GHE_ACCESS_TOKEN=
 export PATH=$PATH:$HOME/Programmi/tsetup.1.2.1/Telegram
+export KUBE_EDITOR=nano
+
