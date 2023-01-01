@@ -38,16 +38,9 @@ export PROJECT_HOME=$HOME/Code
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export PYENV_ROOT=/Users/cmezzavilla/.pyenv
 
-# Jira
-export JIRAURL=
-export JIRACREDENTIALS=
-export JIRA_URL=
-
 # Java (ugh)
 export JAVA_HOME=/usr/lib/jvm/jdk-11.0.1/bin/java
 export PATH=$PATH:/usr/lib/jvm/jdk-11.0.1/bin
 
 # Various applications
-export EDITOR=atom
 export GHE_ACCESS_TOKEN=
-export PATH=$PATH:$HOME/Programmi/tsetup.1.2.1/Telegram

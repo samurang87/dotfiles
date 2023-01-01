@@ -1,10 +1,35 @@
 alias shrug="echo ¯\\\_\(ツ\)_/¯"
 alias tableflip="echo '(╯°□°)╯︵ ┻━┻'"
 
-# launch jetbrains toolbox
-alias jet-brains="~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox -single-process"
-
 # ssh
 alias ssh-start="eval `keychain --eval --agents ssh id_rsa`"
 
-alias gdatb="git branch | grep -v "master" | xargs git branch -D"
+# Clean ALL the Docker!
+# Remove stopped containers
+alias drsc="docker ps -aq --no-trunc | xargs docker rm"
+
+# Remove all containers
+alias drac="docker rm $(docker ps -a -q)"
+
+# Remove dangling/untagged images
+alias drdi="docker images -q --filter dangling=true | xargs docker rmi"
+
+# Remove images with a certain name
+alias drci="docker rmi $(docker images $image | awk '{print $3}')"
+
+# Docker compose
+alias dcupd="docker-compose up -d"
+
+# Git
+alias gdatb="git branch | grep -v "main" | xargs git branch -D"
+
+alias gprom="git pull --rebase origin main"
+
+# Tickets
+jiralink () {
+echo "[$1](https://infarm.atlassian.net/browse/$1)"
+}
+
+ghlink () {
+echo "[$1 $2](https://github.com/infarm/$1/issues/$2)"
+}
