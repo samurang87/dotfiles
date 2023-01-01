@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/cmezzavilla/.oh-my-zsh
-
+source $HOME/.profile
 source $HOME/.aliases
 
 export KUBE_PS1_BINARY="zkubectl"
@@ -71,6 +71,7 @@ plugins=(
   pip
   virtualenvwrapper
   kube-ps1
+  poetry
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -109,4 +110,40 @@ source $ZSH/oh-my-zsh.sh
 
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
-source <(zkubectl completion zsh)
+export PATH="$HOME/.pyenv/bin:$PATH"
+
+export PATH="/usr/local/bin:$PATH"
+export PATH="$(pyenv root)/shims:$PATH"
+
+eval "$(pyenv init -)"
+
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+pyenv virtualenvwrapper_lazy
+
+export LC_CTYPE=C
+#export LANG=C
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+
+# source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+# PS1='$(kube_ps1)'$PS1
+
+# direnv
+eval "$(direnv hook zsh)"
+
+export PATH="/usr/local/opt/bison/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+# if [ -f '/Users/cmezzavilla/Tools/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cmezzavilla/Tools/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+# if [ -f '/Users/cmezzavilla/Tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cmezzavilla/Tools/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Created by `pipx` on 2021-06-28 10:38:11
+# export PATH="$PATH:/Users/cmezzavilla/.local/bin"
+
+# Adb fastboot
+# export PATH="$HOME/Tools/platform-tools:$PATH"
